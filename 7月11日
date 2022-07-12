@@ -1,0 +1,350 @@
+# exercise
+课程练习
+//7月11日早晨练习
+
+
+//取x地址打印
+//#include<stdio.h>
+//	int main()
+//	{
+//		int x=0;
+//	printf("%p\n",&x);
+//		return 0;
+//
+//	}
+//用if/else if/else 语句
+//#include<stdio.h>
+//	int main()
+//	{
+//		int r=0;
+//		scanf("%d",&r);
+//		if(18>=r)
+//			printf("小姐姐");
+//		else if(35>=r)
+//		{
+//			printf("阿姨好");
+//			printf("您好");
+//		}
+//		else
+//			printf("老北鼻");
+//		return 0;
+//	}
+
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=0;
+//		while(i<100)
+//		{
+//			if(i%2==1)
+//				printf("%d\n",i);
+//			i++;
+//		}
+//		return 0;
+//	}
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=1;
+//		while(i<100)//如果i小于100执行循环
+//		{
+//			printf("%d\n",i);
+//			i+=2;//加赋值
+//		}
+//	
+//		return 0;
+//	}
+	//#include <stdio.h>
+	//int main()
+	//{
+	//		int i=0;
+	//		scanf("%d",&i);
+	//		printf("%d\n",i);
+	//	return 0;
+	//}
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=0;
+//		scanf("%d",&i);
+//		if(1==i)
+//			printf("星期一");
+//			else if(2==i)
+//			printf("星期二");
+//		else if(3==i)
+//			printf("星期三");
+//		return 0;
+//	}
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=0;
+//			scanf("%d",&i);
+//			switch(i)//
+//			{
+//				case 1:
+//				case 2:
+//				case 3:
+//				case 4:
+//				case 5:
+//				printf("工作日\n");
+//				break;
+//				case 6:
+//				case 7:
+//				printf("休息日\n");
+//				break;//最后一句不加break随没影响，但是这是一个不好的习惯
+//				default://这句类似if语句中的else的作用
+//				printf("输入错误\n");
+//				break;
+//			}
+//		return 0;
+//	}
+
+
+//switch语句中插入if语句
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=0;
+//		int o=0;
+//			printf("输入日期\n");
+//		scanf("%d",&i);
+//			
+//			switch(i)
+//			{
+//			case 1:
+//				case 2:
+//				case 3:
+//				case 4:
+//				case 5:
+//			printf("工作日\n");
+//			printf("输入参加人数\n");
+//			scanf("%d",&o);
+//			if(o%2==1)
+//				printf("有单身狗\n");
+//			else
+//				printf("玩得开心\n");
+//			break;
+//			case 6:
+//				case 7:
+//			printf("休息日\n");
+//				printf("输入参加人数\n");
+//			scanf("%d",&o);
+//			if(o%2==1)
+//				printf("有单身狗\n");
+//			else
+//				printf("玩得开心\n");
+//			break;
+//				default:
+//					printf("输入错误");
+//						break;
+//			}
+//	
+//		return 0;
+//	}
+
+//#include <stdio.h>
+//	int main()
+//	{
+//		int n=1;
+//		int m=2;
+//		switch(n)
+//		{
+//		case 1:
+//			m++;
+//		case 2:
+//			n++;
+//			case 3:
+//				switch(n)
+//				{
+//				case 1:
+//					n++;
+//				case 2:
+//					m++,n++;
+//					break;
+//				}
+//			case 4:
+//				m++;
+//				break;
+//				default:
+//				break;
+//		}
+//	printf("m=%d,n=%d",m,n);
+//		return 0;
+//	}
+//#include<stdio.h>
+//	int main()
+//	{
+//		if(0)//0为假所以不执行这个if语句
+//			printf("成功\n");
+//		if(1)//除0以外其他数都为真所以这个if语句运行
+//			printf("成功1\n");
+//	return 0;
+//	}
+
+//打印1-10
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=1;
+//			while(10>=i)
+//			{
+//			  printf("%d   ",i);
+//				i++;
+//			}
+//	
+//		return 0;
+//	}
+
+//break在循环语句中的作用
+
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=1;
+//			while(10>=i)
+//			{
+//				if(5==i)
+//					break;//只要满足if条件break可以结束循环
+//			  printf("%d   ",i);
+//				i++;
+//			}
+//	
+//		return 0;
+//	}
+
+//continue在循环语句中的作用
+//
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=1;
+//			while(10>=i)
+//			{
+//				if(5==i)
+//					continue;//只要满足if条件continue可以结束本次循环，
+//								//直接跳到while判断部分重新开始
+//			  printf("%d   ",i);
+//				i++;
+//			}
+//	
+//		return 0;
+//	}
+//利用continue跳过自己不想打印的数
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=0;
+//			while(10>=i)
+//			{
+//				i++;
+//				if(5<i)
+//				continue;//只要满足if条件continue可以结束本次循环，
+//								//直接跳到while判断部分重新开始
+//			  printf("%d   ",i);
+//				
+//			}
+//	
+//		return 0;
+//	}
+//输入输出
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i=getchar();
+//	putchar(i);
+//		return 0;
+//	}
+//#include <stdio.h>
+//
+//	int main()
+//	{
+//		int ch = 0;
+//		                        //EOF - end of file 是文件结束标志
+//	while((ch=getchar()) !=EOF)//输入Ctal+z就结束了
+//		                      //Ctal+z等于EOF
+//	{
+//		putchar(ch);
+//	}
+//		return 0;
+//	}
+//此段程序有BOG，i =getchar();会把上一段输入完成的回车输入到i =getchar();
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i = 0;
+//		int mima[20]={0};
+//		printf("请输入密码");
+//		scanf("%s",mima);
+//		printf("请确认密码:%s",mima);//这段的回车会输入到i =getchar();
+//		printf("确认输入Y，否输入X");
+//		i =getchar();
+//		if(i=='Y')
+//			printf("设置成功");
+//		else
+//			printf("已取消");
+//		return 0;
+//	}
+
+//应证“\n”等于10//放在if中会为真
+
+//#include<stdio.h>
+//	int main()
+//	{
+//		printf("%d\n",'\n');//输出10，为真所以上端程序会执行Y
+//	}
+
+//2.0 版本
+
+//#include <stdio.h>
+//	int main()
+//	{
+//		int i = 0;
+//		int mima[20]={0};
+//		printf("请输入密码:");
+//		scanf("%s",mima);
+//		printf("请确认密码:%s\n",mima);
+//		//由上两程序验证，上一行中缓冲区还有一个\n
+//		//避免BOG我们可以用一个getchar读取掉
+//		getchar();
+//		printf("确认输入Y，否输入X\n");
+//		i =getchar();
+//		if(i=='Y')
+//			printf("设置成功\n");
+//		else
+//			printf("已取消\n");
+//		return 0;
+//	}//即使这样依然会有BOG，只有密码有空格等就会出现问题
+	//#include <stdio.h>
+	//int main()
+	//{
+	//	int ch = 0;
+	//	int i = 0;
+	//	int mima[20]={0};
+	//	printf("请输入密码");
+	//	scanf("%s",mima);
+	//	while((ch=getchar())!='\n')//加循环后有空格虽可执行但依旧不完整
+	//	{
+	//			;
+	//	}
+	//	printf("请确认密码;\n:%s",mima);
+	//	printf("确认输入Y，否输入X\n");
+	//	i =getchar();
+	//	if(i=='Y')
+	//		printf("设置成功\n");
+	//	else
+	//		printf("已取消\n");
+	//	return 0;
+	//}
+#include <stdio.h>
+	int main()
+	{
+		int ch =0;
+	   while((ch=getchar())!=EOF)
+	   {
+	       if(ch<'0'||ch>'9')
+		   continue;
+		   putchar(ch);
+	   }
+		return 0;
+	}
