@@ -1,225 +1,197 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-//int sum(int a)
-//{
-//    int c = 0;
-//    static int b = 3;
-//    c += 1;//c+1=1
-//    b += 2;//b+2=5
-//    return (a + b + c);//8
-//}
-//int main()
-//{
-//    int i;
-//    int a = 2;
-//    for (i = 0; i < 5; i++)
-//    {
-//        printf("%d,", sum(a));
-//    }
-//}
+//                      三目操作符
 //#include<stdio.h>
 //int main()
 //{
-//    int a, b, c, d;
-//    scanf("%d%1d%1d%1d", &a, &b, &c, &d);
-//    printf("%d%d%d%d", d, c, b, a);
-//    return 0;
-//}
-// 
-// 
-// 
-//从键盘输入5个学生的成绩（整数），求他们的平均成绩（浮点数，保留一位小数）。
+//	int i = 7;
+//	int b = 77;
+//	int m = i > b ?i:b;
+//	printf("%d\n", m);
+//	printf("%d\n",i < b ? i : b);
 //
-//输入描述：
-//一行，连续输入5个整数（范围0~100），用空格分隔。
-//输出描述：
-//一行，输出5个数的平均数（保留一位小数）。
-//#include<stdio.h>
-//int main()
-//{
-//    int a, b, c, d, e;
-//    float i = 0;
-//    scanf("%d%d%d%d%d", &a, &b, &c, &d, &e);
-//    if (a < 100, b < 100, c < 100, d < 100, e < 100)
-//        i = (a + b + c + d + e) / 5.0;
-//    printf("%.1f", i);
-//    return 0;
-//}
-// 
-//KiKi想知道从键盘输入的两个数的大小关系，请编程实现。
-//输入描述：
-//题目有多组输入数据，每一行输入两个整数（范围 - 231~231 - 1），用空格分隔。
-//输出描述：
-//针对每行输入，输出两个整数及其大小关系，数字和关系运算符之间没有空格，详见输入输出样例。
-//
-//#include<stdio.h>
-//int main()
-//{
-//    int a, b;
-//    while(scanf("%d",&a,&b)!= EOF)
-//    {
-//        //scanf("%d%d", &a, &b);
-//        if (a == b)
-//            printf("%d=%d\n", a, b);
-//        else if (a > b)
-//            printf("%d>%d\n", a, b);
-//        else
-//            printf("%d<%d\n", a, b);
-//    }
-//    return 0;
-//}
-//输入秒数，计算小时，分，秒
-//#include<stdio.h>
-//int main()
-//{
-//	int a, b, c,d;
-//	scanf("%d", &a);
-//	b = a / 3600;
-//	c = a % 3600 / 60;
-//	d = a % 60;
-//	printf("%d %d %d", b, c, d);
-//	return 0;
-//	}
-//
-//算数操作符
-//
-//除法运算
-//
-//#include<stdio.h>
-//int main()
-//{
-//	printf("%d\n", 7 / 2);//打印出3，整数/整数只会等于整数。
-//	printf("%d\n", 7 / 2);//打印不出3.5需要用float变量打印符
-//	printf("%.1f\n", 7.0 / 2);//用float变量打印符，再加.1.表示小数点后留一位
-//	return 0;
-//	}
-
-//取模运算
-//
-//#include<stdio.h>
-//int main()
-//{
-//	printf("%d\n", 7 % 2);//模运算，取余
 //	return 0;
 //}
 
-//赋值操作符
+
 //#include<stdio.h>
 //int main()
 //{
-//	int i = 10;// 一个等号是赋值
-//	int j = 10;
-//	if (10 == i)//两个等号是判断
-//	{;}
-//	i += 5;//与下面的式子功能一样，但更简短；
-//	j = j + 5;
-//	printf("%d\n%d\n", i, j);
-//
-//	i *= 5;//与下面的式子功能一样，但更简短；
-//	j = j * 5;
-//
-//	printf("%d\n%d\n", i, j);
+//	int i = 0;
+//	int d = 0;
+//	scanf("%d%d", &i, &d);
+//	printf("%d\n", (i > d) ? i : d);
 //	return 0;
-//}
+//	}
 //
-//逻辑取反
-//
-//#include <stdio.h>
+//               逻辑与
+//#include<stdio.h>
 //int main()
+//{
+//	int i = 18;
+//	int c = 1;
+//	if (i && c)
 //	{
-//	int a = 5;
-//	a=!a;//!在前面表示逻辑取反
-//	printf("%d\n", a);//真变假，假变真
+//		printf("hehe");
+//		
+//	}
 //	return 0;
-//}
-//#include <stdio.h>
+//	}
+
+//#include<stdio.h>
 //int main()
 //{
-//	int a = 0;
-//	a = !a;//!在前面表示逻辑取反
-//	printf("%d\n", a);//真变假，假变真
+//	int i = 18;
+//	int c = 1;
+//	if (i >= 18 && c < 15)//逻辑与，只有两边都为真才执行
+//	{
+//		printf("姐姐");
+//
+//	}
 //	return 0;
 //}
-
-//！逻辑反的应用
-
-#include<stdio.h>
+//                          逻辑或
+//
+//#include<stdio.h>
 //int main()
 //{
-//	int m = 0;
-//	scanf("%d", &m);
-//	if (m)//if语句只要括号中为真就运行
-//		printf("真");
-//	if(!m)
-//		printf("假");
+//	int i = 1;
+//	int c = 0;
+//	if (i || c)//逻辑或，只要有一个为真就会执行
+//	{
+//		printf("hehe");
+//
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	auto int a = 3;//auto是自动的意思，局部变量都是自动创建自动销毁的
+//	//现在可以不用加了，一前需要罢了
+//	int b = 4;
+//	int c = 1;
+//	int d =(c=a + b, a=c + b, a=c + a);//由左往右计算，输出最右值
+//	//      c=7;   a=7+4=11   a=7+11=18
+//	printf("%d\n", d);
 //	return 0;
 //
+//	
+//}
+//                   类型重定义
+//
+//#include<stdio.h>
+//typedef unsigned int cco;//把unsigned int的名字改为cco，本质没变还是无符号整形
+//int main()
+//{
+//	unsigned int i = 9;//无符号整数类型i=9，定义比较繁琐
+//	cco i1 = 10;//与上一行类型一样
+//	printf("%d\n", i1);//输出10，i1为整数类型
+//	return  0;
+//
+//	}
+
+//						寄存器关键字
+//#include <stdio.h>
+//int main()
+//{
+//	register int o = 10;//register是寄存器关键字，加在类型前面
+//	//加了register后，表示建议把 o 变量放到寄存器当中，只是建议
+//	//寄存器中运行速度比较快
+//	return 0;
+//}
+//                                 调用函数
+// 
+// 
+// //                          static的使用
+
+//修饰局部变量
+
+//#include<stdio.h>
+//void bibi()
+//{
+//	static int a = 1;//加了static之后，变量只有main结束之后才会初始化
+//	//int a = 1;
+//	a++;
+//	printf("%d\n", a);
+//	}
+//int main()
+//{
+//	int j = 0;
+//	while (j < 10)
+//	{
+//		bibi();//调用bibi函数
+//		j++;
+//	}
+//	return 0;
 //}
 
-//sizeof的使用
+//修饰全局变量
 //#include<stdio.h>
 //int main()
 //{
-//	int o = 0;
-//	printf("%d",sizeof(o));//sizeof计算的是所在内存大小，单位是字节
+//	extern int bb;
+//	//extern int kk;//kk（全局变量）被static修饰后将失去外部链接属性
+//
+//	printf("%d\n", bb);
+//	//printf("%d\n", kk);
+//
 //	return 0;
-//}
+//	}
+
+
+//修饰函数
 //#include<stdio.h>
 //int main()
 //{
-//	int o[10] = {0};
-//	printf("%d\n",sizeof(o));//计算的是数组总大小
-//	printf("%d\n",sizeof(o[1]));//计算数组中单个数的大小
+//	int dd = 3;
+//	int ss = 7;
+//	extern int Add();//Add被加static后，将失去外部链接属性；
+//	int v = Add(dd, ss);
+//	printf("%d\n", v);
 //	return 0;
 //}
-
-
-							//计算数组元素个数
+// 
+// 
+//小乐乐学校教学楼的电梯前排了很多人，他的前面有n个人在等电梯。
+//电梯每次可以乘坐12人，每次上下需要的时间为4分钟（上需要2分钟，下需要2分钟）
+//。请帮助小乐乐计算还需要多少分钟才能乘电梯到达楼上。（假设最初电梯在1层）
 //#include <stdio.h>
 //int main()
 //{
-//	int bb[10] = { 0 };
-//	int mm = sizeof(bb) / sizeof(bb[1]);
-//	printf("bb含有:%d个元素",mm);
-//	return 0;
+//    int n = 0;//人数
+//    int i = 12;//运载量
+//    int m = 0;//次数
+//    int j = 0;//时间
+//    scanf("%d", &n);
+//    m = n / i;
+//    printf("%d\n", m * 4 + 2);
+//    return 0;
 //}
-							
-//							//sizeof和strlen的区别
-//#include <stdio.h>
-//#include<string.h>
+//KiKi写了一个输出“Hello world!”的程序，BoBo老师告诉他printf函数有返回值，
+//你能帮他写个程序输出printf(“Hello world!”)的返回值吗？
+//#include<stdio.h>
 //int main()
 //{
-//	char i[] = "123" ;
-//	char b[] = { '1','2','3'};
-//	char c[] = { '1','2','3','\0' };
-//	printf("%d\n", strlen(i));//3
-//	printf("%d\n", strlen(b));//15//strlen计算的是所含字符（元素）个数，\0是结束表示符不算元素
-//	printf("%d\n", sizeof(i));//4
-//	printf("%d\n", sizeof(b));//3//sizeof计算的是所占内存多少
-//	int mm = sizeof(c) / sizeof(c[1]);//注意\0是占内存的，只是不算元素
-//	printf("c含有:%d个元素",mm);
-//	int hh = sizeof(i) / sizeof(b[i]);//数组中字符串\0是strlen自动加的
-//	printf("i含有:%d个元素",hh);
-//	return 0;
+//    int mm = printf("Hello world!");//注意此处不能加\n，
+//    //因为这样会导致Printf的返回值中加一，应该单独换行
+//    printf("\n");
+//    printf("%d\n", mm);
+//    return 0;
 //}
 
-//								前置加加，后置加加
-//								前置减减，后置减减
+//      从键盘任意输入一个字符，编程判断是否是字母（包括大小写）。
+//输入描述：
+//输入包括一个字符。
+//输出描述：
+//输出该字符是字母（YES）或不是（NO）。
 //#include <stdio.h>
 //int main()
 //{
-//	int a = 10;
-//	int b = 0;
-//	b = ++a;//可以拆成a=a++然后b=a;先加加后计算
-//	printf("%d  %d", a, b);
-//	return 0;
+//	char mm = 0;
+//	scanf("%c", &mm);
+//	if (mm >= 'a' && mm <= 'z' || mm >= 'A' && mm <= 'Z')
+//		printf("Yes");
+//	else
+//		printf("No");
+//		return 0;
 //}
-#include <stdio.h>
-int main()
-{
-	int a = 10;
-	int b = 0;
-	b = a--;//可以拆成b=a然后a=a--;先计算后减减
-	printf("%d  %d", a, b);
-	return 0;
-}
