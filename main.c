@@ -1,111 +1,17 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//#define mm 100  //#define定义的表示符常量
-//#define xx 10     //注意不要用双引号
-//#include<stdio.h>
-//int main()
-//{
-//	
-//	int vv[xx] = { 0 };
-//	printf("%d", mm);
-//
-//	}
-///                              if语句
-//#include<stdio.h>
+#include <stdio.h>
+
 //int main()
 //{
 //	int i = 0;
-//	scanf("%d", &i);
-//	if (i <= 18)
-//		printf("青年");
-//	else if (i > 18 && i < 35)
-//		printf("中年");
-//	else
-//
-//		printf("老年");
-//	return 0;
-//	}
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 1;
-//	while(i<=100)
+//	for (i = 0; i < 10; i++)
 //	{
-//		if (i % 2 == 1)
-//			printf("%d\n",i);		
-//		i++;
+//		if (i = 5)
+//			printf("%d ", i);
 //	}
 //	return 0;
 //}
 
-        ///                             循环分支
-//#include<stdio.h>
-//int main()
-//{
-//	int i = 1;
-//	int y = 2;
-//	if (0 == i)//       2  if判断为假他的下段程序不执行，或者代码块不执行
-//		if (2 == y)//   上面为假不执行
-//			printf("hehe");
-//		else//           不执行
-//			printf("haha");
-//	return 0;//  1   啥都不会输出
-//}
-
-//                          
-//                          return
-//
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	int h = 0;
-//	if (0 == i)
-//	{
-//		printf("hehe");
-//		return 0;//函数中只要执行了return,将直接结束函数。
-//		//         循环的话是直接跳到第一句判断
-//	}
-//	if (0 == h)
-//		printf("haha");
-//	return 0;
-//}
-//                    判断输入值的奇数偶数
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	scanf("%d", &i);
-//	if (i % 2 == 1)
-//		printf("奇数");
-//	else
-//		printf("偶数");
-//
-//	return 0;
-//}
-//                            if语句
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	scanf("%d", &i);
-//	if (1 == i)
-//		printf("星期一");
-//	else if (2 == i)
-//		printf("星期二");
-//	else if (3 == i)
-//		printf("星期三");
-//	else if (4 == i)
-//		printf("星期四");
-//	else if (5 == i)
-//		printf("星期五");
-//	else if (6 == i)
-//		printf("星期六");
-//	else if (7 == i)
-//		printf("星期天");
-//	else 
-//		printf("输入错误");
-//	return 0;
-//}
 //#include <stdio.h>
 //int main()
 //{
@@ -113,180 +19,307 @@
 //	scanf("%d", &i);
 //	switch (i)
 //	{
-//	case 1:
-//		printf("星期一");
-//		break;//停止
-//	case 2:
-//		printf("星期二");
-//		break;
-//	case 3:
-//	printf("星期三");
-//	break;
-//		case 4:
-//	printf("星期四");
-//	break;
-//		case 5:
-//	printf("星期五");
-//	break;
-//		case 6:
-//	printf("星期六");
-//	break;
-//		case 7:
-//	printf("星期天");
-//	break;
-//		default :
-//	printf("输入错误");
-//	break;
-//		}
-//	return 0;
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	scanf("%d", &i);
-//	switch (i)
-//	{
-//			case 1:
-//			case 2:
-//			case 3:
-//			case 4:
-//			case 5:
-//		printf("工作日");
-//		break;
-//			case 6:
-//			case 7:
-//		printf("休息日");
-//		break;
 //	default:
-//		printf("输入错误");
+//		printf("mmmm");
 //		break;
+//	case 1:
+//		printf("hhh");
+//	
 //	}
-//	return 0;
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	while (i <= 10)
-//	{
-//		printf("%d", i);
-//		if (5 == i)
-//			break;//直接结束循环
-//		i++;
-//	}
-//	return 0;
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	while (i <= 10)
-//	{
 //		
-//		i++;
-//		if (5 == i)
-//			continue;//终止本轮循环，重新回到判断，
-//		//            下面程序将不执行
-//		printf("%d", i);
-//		
-//	}
 //	return 0;
 //}
+//写一个代码打印1 - 100之间所有3的倍数的数字
 //#include <stdio.h>
-//int main()
+//	int main()
 //{
-//	char i = 0;
-//	while ((i = getchar()) != EOF)//getchar是输入字符
-//	{
-//		putchar(i);//putchar是打印字符
-//	}
-//		return 0;
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	char i[20] = {0};
-//	char b = 0;
-//	char d = 0;
-//
-//	i = getchar();//getchar是输入字符
-//		putchar(i);//putchar是打印字符
-//		while (d = getchar() != '\n')
+//		for (int i = 1; i < +100; i++)
 //		{
-//			;
+//			if (i % 3 == 0)
+//				printf("%d\n", i);
+//	  }
+//}
+//写代码将三个整数数按从大到小输出。
+//
+//例如：
+//
+//输入：2 3 1
+//
+//输出：3 2 1
+//#include<stdio.h>
+//int main()
+//{
+//	int a,b,c,t;
+//scanf("%d%d%d", &a, & b, &c);
+//if(a<b)
+//{
+//	t=a;a=b;b=t;
+//}
+//if(a<c) 
+//{
+//	t=a;a=c;c=t;
+//}
+//if(b<c) 
+//{
+//	t=b;b=c;c=t;
+//}
+//printf("%d%d%d",a,b,c);
+//return 0;
+//}
+
+
+
+
+
+//写一个代码：打印100~200之间的素数
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 100; i >= 100 && i <= 200; i++)
+//	{
+//		int j = 0;
+//		for (j = 2; j <= i - 1; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
 //		}
-//	printf("打印是否正确a/b\n");
-//	getchar("%c",&b);
-//	if (b == 'a')
-//		printf("正确");
+//		if (j >= i)
+//		{
+//			printf("%d\n", i);
+//		}
+//	}
+//	return 0;
+//}
+//打印1000年到2000年之间的闰年
+//#include<stdio.h>
+//
+//int main() 
+//{
+//    for (int year = 1000; year <= 2000; year++)
+//    {
+//        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+//        {
+//            printf("%d ", year);
+//        }
+//    }
+//    return 0;
+//}
+// 
+//                     最大公约数
+//#include<stdio.h>
+//int main()
+//{
+//	int m = 0;
+//	int n = 0;
+//	int max = 0;
+//	scanf("%d %d", &m, &n);
+//	if (m > n)
+//	{
+//		max = m;
+//	}
 //	else
-//	printf("错误");
-//	return 0;
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	char ii[20] = { 0 };
-//	int d = 0;
-//	printf("请输入密码:>");
-//		scanf("%s", ii);
-		/*printf("您输入的密码是:%s\n", ii);
-		printf("确认密码输入a，取消输入a");*/
-//		while ((d = getchar()) != '\n')
+//	{
+//		max = n;
+//	}
+//	while (1)
+//	{
+//		if (m % max == 0 && n % max == 0)
 //		{
-//			;
+//			printf("%d", max);
+//			break;
 //		}
-//		printf("确认密码输入(Y/N)");
-//		int i = getchar();
-//		if (i=='Y')
-//		    printf("已确认");
-//		else
-//			printf("已取消");
-//	return 0;
+//		max--;
+//	}
 //}
 
-//                               for  循环
-
-//先用while做一个人列子
-//#include <stdio.h>
+                     //屏幕上打印九九乘法表
+//#include<stdio.h>
 //int main()
 //{
-//	int mm = 1;//循环初始化部分
-//	while (mm < 10)//循环判断部分
+//	for (int i = 1; i <= 9; i++)
 //	{
-//		printf("%d\n", mm);
-//		mm++;//循环调整部分
+//		for (int j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%2d  ", j, i, j * i);
+//			if (i == j)
+//			{
+//				printf("\n");
+//			}
+//		}
 //	}
 //	return 0;
 //}
-//以上可以看出循环由三部分组成
+///                 求最大值
+//////////#include <stdio.h>
+//////////int main()
+//////////{
+//////////	char yy[10] = { 0 };
+//////////	scanf("%s", yy);
+//////////	char a = 2;
+//////////	for (int i = 0; i < 10; i++)
+//////////	{
+//////////		if (yy[i] < yy[a])
+//////////			yy[a] = a;
+//////////		else
+//////////		yy[i] = a;
+//////////	}
+//////////	printf("%c", a);
+//////////	return 0;
+//////////}
+// #include <stdio.h>
+//int main() 
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i <= 9; i++) 
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int max_num = 0;
+//	for (i = 0; i <= 9; i++)
+//	{
+//		if (max_num < arr[i])
+//		{
+//			max_num = arr[i];
+//		}
+//	}
+//	printf("%d", max_num);
+//}
 
-
-//下面开始正式的for语句
 
 //#include <stdio.h>
 //int main()
 //{
-//
-//	for (int i = 1; i <= 10; i++)//不建议把调整变量放下面
+//    int i = 0;
+//    scanf("%d", &i);
+//    int m = 0;
+//    int h = 1;
+//    for (m = 1; m <= i; m++)
+//    {
+//        h = h * m;
+//    }
+//    printf("%d", h);
+//    return 0;
+//   }
+
+//数字查找
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 };
+//	int m = sizeof(i) / sizeof(i[0]);//数组元素个数
+//	int w = m - 1;//尾标
+//	int y = 0;//默认初始下标
+//	int k = 8;//需要查找的数字
+//	int e = 0;//2/1数
+//	while
 //	{
+//		e=()
+//	}
+//	return 0;
+//}
+
+//                      do while
+//输出1-10
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	do
+//	{
+//		i++;
 //		if (5 == i)
-//			break;   //直接跳出循环执行下一个代码块
-//			continue;//会使代码块结束本轮循环
+//			//break;//直接跳出循环，结束
+//			continue;//结束本次循环重新判断
 //		printf("%d\n", i);
-//	};
-//
+//	}
+//		while (i <=10);
 //	return 0;
 //}
-//         for输出0-10
+//                           求阶乘
+
+//#include<stdio.h>
+//int main()
+//{
+//    int n = 0;//需要求阶的数
+//    scanf("%d", &n);//输入
+//    int i = 0;//辅助数
+//    int tt = 1;//输出
+//    for (i = 1; i <= n; i++)
+//    {
+//        tt = tt * i;
+//    }
+//    printf("%d", tt);
+//    return 0;
+//}
+//                       1-3的阶乘
+//#include<stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    //scanf("%d", &n);//输入
+//    int i = 0;//辅助数
+//    int tt = 1;//输出
+//    int b = 0;//1-10
+//   for(b = 1;b<=3;b++)//输出1-3
+//    {
+//       tt = 1;
+//        for (i = 1; i <= b; i++)//算阶乘
+//        {
+//            tt = tt * i;
+//        }
+//        n = n + tt;
+//      
+//    }
+//   printf("%d\n", n);
+//    return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//    int d = 1;
+//    d =3%3;
+//    printf("%d",d);
+//}
 //#include <stdio.h>
 //int main()
 //{
-//	int i = 1;
-//	for (i = 1; i <= 10; i++)
+//	int a = 0, b = 0;
+//	for (a = 1, b = 1; a <= 100; a++)
 //	{
-//		printf("%d",i);
+//		if (b >= 20) break;
+//		if (b % 3 == 1)
+//		{
+//			b = b + 3;
+//			continue;
+//		}
+//		b = b - 5;
 //	}
+//	printf("%d\n", a);
+//	return 0;
+//}
+//计算1 / 1 - 1 / 2 + 1 / 3 - 1 / 4 + 1 / 5 …… + 1 / 99 - 1 / 100 的值，打印出结果
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;//循环次数
+//	int k = 1;//分母
+//	int y = 1;//分字
+//	int d = 0;//储存
+//	while (i < 100)
+//	{
+//		if(i%2==0||i==1)
+//		d = d -(k / y);
+//		else
+//			d = d+ (k / y);
+//		i++;
+//		y++;
+//	}
+//	printf("%d", d);
 //	return 0;
 //}
