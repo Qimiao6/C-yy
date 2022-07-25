@@ -1,243 +1,143 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//           用函数判断素数
-//#include<stdio.h>
-//#include<math.h>
-//int su(int x)
-//{
-//	int k = 0;
-//	for (k = 2; k <= sqrt(x); k++)
-//	{
-//		if (x % k == 0)
-//		{
-//					return 0;
-//		}
-//	}
-//				return 1;
-//	}
+//#include <stdio.h>
 //int main()
 //{
-//	int i = 100;
-//	int b = 0;//统计素数
-//	for (i = 100; i <= 200; i++)
+//	int i = 1;//循环次数
+//	int k = 1;//分母
+//	int y = 1;//分字
+//	float d = 0.0;//储存
+//	while (i <= 100)
 //	{
-//		if (su(i) == 1)
-//		{
-//			printf("%d ", i);
-//			b++;
-//		}
-//	}
-//	printf("\n%d", b);
-//	}
-//                           用函数判断润年
-//#include<stdio.h>
-//int ss(int x)
-//{
-//	return ((x % 4 == 0) &&( x % 100 != 0)) || (x % 400 == 0);
-//}
-//int main()
-//{
-//	int i = 0;
-//	int b = 0;//统计润年
-//	for (i = 1000; i <= 2000; i++)
-//	{
-//		if (ss(i) == 1)
-//		{
-//			printf("%d ", i);
-//			b++;
-//		}
-//	}
-//	printf("\n闰年有：%d个 ", b);
-//	return 0;
-//}
-
-//               用函数找有序数字
-
-//#include<stdio.h>
-////int rr(int* p,int m,int f)//上下两种方式皆可
-//int rr(int gg[], int m, int f)//上下两种方式皆可
-//{
-//	int i = 0;//数组左下标
-//
-//	while(i<=f)
-//	{
-//		int mim = i + (f - i) / 2;
-//		if (gg[mim] > m)
-//			f = mim - 1;
-//		else if (gg[mim] < m)
-//			i = mim + 1;
+//		
+//		if (i % 2 == 0 || i == 1)
+//			d = d - (k / y);
 //		else
-//			return mim;
+//			d = d + (k / y);
+//		i++;
+//		y++;
 //	}
-//	return -1;
-//}
-//int main()
-//{
-//	int yy[] = { 1,2,3,4,5,6,7,8,9,10 };
-//	int b = sizeof(yy)/ sizeof(yy[1]) - 1;//右下标
-//	int m = 1;
-//	int pp =rr(yy, m,b);
-//	if (pp == -1)
-//	{
-//		printf("找不到");
-//	}
-//	else
-//	printf("找到了下标是：%d", pp);
+//	printf("%f", d);
 //	return 0;
 //}
-
-//#include<stdio.h>
-//void kk(int* x)//接收传过来的地址
-//{
-//	*x = *x + 1;
-//}
-//int main()
+//#include <stdio.h>
+//
+//
+//int  main()
 //{
 //	int i = 0;
-//	kk(&i);
-//	printf("%d\n", i);
-//	kk(&i);//调用函数
-//	printf("%d\n", i);
-//	return 0;
-//	}
-///                 打印strlen(字符长度)返回值
-//#include<stdio.h>
-//#include<string.h>
-//
-//int main()
-//{
-//	int i = strlen("1234556");
-//	printf("%d\n", i);
-//	return 0;
-//
-//	}
-//#include<stdio.h>
-//#include<string.h>
-//
-//int main()
-//{
-//	//printf("%d\n", strlen("1234556"));//把strlen的返回值给printf.
-//	printf("%d ", printf("%d ", printf("%d ", 43)));//打印两个字符就返回2，打印1个字符就返回1
-//	//空格也算一个字符
-//	return 0;
-//}
-
-//              函数的声明
-//#include<stdio.h>
-////void Add(int, int);//Add函数的声明
-//void Add(int x, int y);//也可以直接复制上来
-//int main()
-//{
-//	int d = 4;
-//	int m = 9;
-//	Add(d, m);
-//	return 0 ;
-//	}
-//void Add(int x, int y)//写在main下面会出现未定义，需要在上方加头文件
-//{
-//	printf("%d",(x + y));
-//}
-
-//#include"Add.h"//等于int Add(int x, int y)，声明
-//#include<stdio.h>
-////#pragma comment(lib, "ceshi.lib")//加密文件声明
-//int main()
-//{
-//	int d = 4;
-//	int m = 9;
-//	scanf("%d %d", &d,&m);
-//	int g =Add(d, m);
-//	printf("%d", g);
-//	return 0 ;
-//	}
-
-////           最简单的递归
-//#include<stdio.h>
-//int main()
-//{
-//	printf("haha\n");
-//	main();
-//	return 0;
-//	}
-
-//                     递归练习
-//#include<stdio.h>
-//int sum(int);
-//int main()
-//{
-//	int i = 0;
-//	scanf("%d", &i);
-//	sum(i);
-//	return 0;
-//}
-//int sum(int x)
-//{
-//	//先调用，调用程序执行完才会往下运行
-//	if (x >= 10)
+//	double sum = 0.0;
+//	int flag = 1;
+//	for (i = 1; i <= 100; i++)
 //	{
-//		sum(x / 10); //调用程序执行完才会往下运行      //递归就是自己调用自己                
-//		int u = x % 10;           //自己创建自己销毁
-//		printf("%d ", u);
+//		sum += flag * 1.0 / i;
+//		flag = -flag;
+//	}
+//	printf("%lf\n", sum);
+//	return 0;
+//}
+
+//                                  递归实现n的k次方
+//int stet(int n,int k)
+//{
+//	if (k > 1)
+//	{
+//		return (n* stet(n, k-1));
 //	}
 //	else
 //	{
-//		printf("%d ", x);
+//		return n;
+//	}
+//
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	int k = 0;
+//	printf("输入n k:\n");
+//	scanf("%d %d", &n,&k);
+//	int y=stet(n,k);
+//	printf("%d", y);
+//	return 0;
+//}
+
+//                  例如，调用DigitSum(1729)，则应该返回1+7+2+9，它的和是19
+////                            输入：1729，输出：19
+//#include <stdio.h>
+//int DigitSum(int jj);
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int gg =DigitSum(n);
+//	printf("%d", gg);
+//	return 0;
+//}
+//int DigitSum(int jj)
+//{
+//	if (jj >= 10)
+//	{
+//		return jj % 10 + DigitSum(jj / 10);
+//	}
+//	else
+//	{
+//		return (jj % 10);
+//	}
+//}
+
+////                   字符串逆序（递归实现）
+//#include <stdio.h>
+//char reverse_string(char* str)
+//{
+//	if (*str == '\0')
+//	{
+//		return;
+//	}
+//	reverse_string(str + 1);
+//	printf("%c", *str);
+//}
+//
+//int main()
+//{
+//	char str[] = "abcefg";
+//	reverse_string(str);
+//	printf("\n");
+//	return 0;
+//}
+//                    递归和非递归分别实现strlen
+
+////                        非递归
+//#include <stdio.h>
+//int main()
+//{
+//	char pp[] = { "abcdef" };
+//	printf("%d", strlen(pp));
+//	return 0;
+//}
+
+//   递归
+//int i = 0;
+//int rrh(char* kk)
+//{
+//	if (kk[i]!='\0')
+//	{
+//		return 1 + rrh(kk + 1);
+//	}
+//	else
+//	{
 //		return 0;
 //	}
-//	         
-//}
-
-///                        测 试
-//int And(int x, int y)
-//{
-//    return(x + y);
+//
 //}
 //
-//
-//#include<stdio.h>
-//int i = 9;
-//int y = 4;
-//int main()
-//{
-//    
-//    printf("%d",And(i, y));
-//
-//    }
-
-//                        普通方式求y的阶乘
 //#include<stdio.h>
 //int main()
 //{
-//    int i = 0;
-//    int b = 1;//商
-//    scanf("%d", &i);
-//    for (int y = 1; y <= i; y++)
-//    {
-//        b = b * y;
-//    }
-//    printf("%d", b);
-//    return 0;
+//	
+//	char pp[] = { "abcdef" };
+//	int yy = rrh(pp);
+//	printf("%d", yy);
+//	return 0;
 //}
-//                递归方式求y的阶乘
-#include<stdio.h>
-int main()
-{
-    int i = 0;
-    scanf("%d", &i);
-    int b = ss(i);
-    printf("%d", b);
-    return 0;
-}
-int ss(int x)
-{
-    if (x == 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return x * ss(x - 1);
-    }
-}
-//  注释
 
-    //    4*（3阶乘）*   3*（2阶乘）* 2*（1阶乘）* return 1；
