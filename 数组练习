@@ -1,0 +1,108 @@
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//void hanoi(int num, char sou, char tar, char aux)//3  a  b  c 
+//{
+//        static int i = 1;//统计移动次数
+//       if (num == 1) //如果圆盘数量仅有 1 个，则直接从起始柱移动到目标柱
+//       {
+//        printf("第%d次:从 %c 移动至 %c\n", i, sou, tar);
+//        i++;
+//        }
+//    else {
+//        //递归调用 hanoi() 函数，将 num-1 个圆盘从起始柱移动到辅助柱上
+//        hanoi(num - 1, sou, aux, tar);
+//        //将起始柱上剩余的最后一个大圆盘移动到目标柱上
+//        printf("第%d次:从 %c 移动至 %c\n", i, sou, tar);
+//        i++;
+//        //递归调用 hanoi() 函数，将辅助柱上的 num-1 圆盘移动到目标柱上
+//        hanoi(num - 1, aux, tar, sou);
+//    }
+//}
+//int main()
+//{
+//    //以移动 3 个圆盘为例，起始柱、目标柱、辅助柱分别用 A、B、C 表示
+//    hanoi(3, 'A', 'B', 'C');
+//    return 0;
+//}
+
+//                                  计算小数
+//
+//#include<stdio.h>
+//int main()
+//{
+//    int i = 1;
+//    double pp = 0.0;
+//    int flait = 1;
+//    for (i = 1; i <= 100; i++)
+//    {
+//      /*  if (i % 2 == 0)
+//        {
+//            pp -= 1.0 / i;
+//        }
+//        else
+//        {
+//            pp +=1.0 / i;
+//        }*/
+//       pp += flait*(1.0 / i);
+//        flait = -flait;
+//
+//      
+//    }
+//    printf("%lf", pp);
+//    return 0;
+//    }
+
+//                     统计1-100带9的数字
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int b = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (9 == i % 10 || 9 == i / 10)
+//		{
+//			printf("%d  ", i);
+//			b++;
+//		}
+//	}
+//	printf("\n%d", b);
+//	return 0;
+//	}
+
+//                             打印数组的每一位
+//#include <stdio.h>	
+//int main()
+//{
+//	int mm[] = {1,2,3,4,5,6,7,8,9,10};
+//	int i = 0;
+//	while (i <= 10)
+//	{
+//		printf("%d  ", i);
+//		i++;
+//	}
+//	return 0;
+//	}
+
+//                打印数组中每个数及地址
+//#include <stdio.h>	
+//int main()
+//{
+//	int mm[] = {1,2,3,4,5,6,7,8,9,10};
+//	int i = 0;
+//	while (i <= 10)
+//	{
+//		printf("mm[%d]= %p  \n", i,&mm[i]);
+//		i++;
+//	}
+//	return 0;
+//	}
+
+//									二维数组练习
+#include <stdio.h>
+int main()
+{
+	int arr[3][4] = { 1,2,3,4,5 };
+	return 0;
+	}
