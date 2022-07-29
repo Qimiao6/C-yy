@@ -1,0 +1,159 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//int stet(int n, int k)
+//{
+//	if (k > 1)
+//	{
+//		return (n * stet(n, k - 1));
+//	}
+//	else
+//	{
+//		return n;
+//	}
+//
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	int k = 0;
+//	printf("输入n k:\n");
+//	scanf("%d %d", &n, &k);
+//	int y = stet(n, k);
+//	printf("%d", y);
+//	return 0;
+//}
+//                      非递归逆序字符串(使用下标)
+
+//#include<stdio.h>
+//#include<string.h>
+//
+//void art(char* arr);
+//
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	art(arr);
+//	printf("%s", &arr);
+//	return 0;
+//}
+//void art(char *arr)
+//{
+//	int st = strlen(arr)-1;
+//	char i;
+//	int y = 0;
+//	for (y = 0; y < st; y++)
+//	{
+//		i = *(arr + y);
+//		*(arr + y) = *(arr + st);
+//		*(arr + st) = i;
+//		i++;
+//		st--;
+//	}
+//}
+//                      非递归逆序字符串(使用指针)
+
+//#include<stdio.h>
+//#include<string.h>
+//
+//void art(char* arr);
+//
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	art(arr);
+//	printf("%s", &arr);
+//	return 0;
+//}
+//void art(char* arr)
+//{
+//	char i;
+//	int st = strlen(arr) - 1;
+//	char* zz = arr;//左下标地址
+//	char* yy = arr + st;//右下标
+//	while (zz < yy)
+//	{
+//		i = *zz;
+//		*zz = *yy;
+//		*yy = i;
+//		zz++;
+//		yy--;
+//	}
+//	}
+//                            递归实现
+//
+//#include<stdio.h>
+//#include<string.h>
+//void art(char* pp);
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	art(arr);
+//	printf("%s", &arr);
+//	return 0;
+//}
+//void art(char* pp)
+//{
+//	char* dd = (pp + strlen(pp) - 1);//右
+//	char cmp = *pp;//左
+//	*pp = *dd;
+//	*dd = '\0';
+//	if (strlen(pp + 1) > 1)
+//		art(pp + 1);
+//	*dd =cmp;
+//
+// }
+
+//                    操作符
+
+//#include <stdio.h>
+//int main()
+//{
+//	printf("%lf", 4.0 / 2);
+//	}
+
+//                     左移/右移
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 4;
+   //   00000000 00000000 00000000 00000100
+   //    正整数的原码，反码，补码都是一样的。
+//	int b = a << 1;//移动的是二进制补码。
+//	printf("%d", b);
+//	return 0;
+//	}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = -4;
+//	//10000000 00000000 00000000 00000100 原码
+//	//11111111 11111111 11111111 11111011 反码
+//	//负整数 原码 变 反码，符号位不变其他位按位取反
+//	//11111111 11111111 11111111 11111100 补码
+//	// 负整数 反码 变 补码 ，在反码上+1，其他不变
+//	int b = a << 1;//移动的是二进制补码。
+//	printf("%d", b);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	printf("%d", 3 | -5);
+//	return 0;
+//}
+
+//         不创建临时变量，交换两个数的值
+#include<stdio.h>
+int main()
+{
+	int a = 3;
+	int b = 5;
+	a = b + a;
+	b = a - b;
+	a = a - b;
+	printf("a = %d b = %d", a, b);
+}
