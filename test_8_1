@@ -1,0 +1,128 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	scanf("%d", &i);
+//	int a = arr(i);
+//	printf("%d", a);
+//	return 0;
+//}
+//int arr(int k)
+//{
+//	if (k >= 6)
+//		return (k % 6 + arr(k / 6));
+//	else
+//		return k;
+//}
+//每年的4，6，9，11月的天数都是30天
+//每年的1，3，5，7，8，10，12月都是31天
+//然后计算2月的天数
+//2月的天数有两种，闰年为29天，非闰年28天
+//#include<stdio.h>
+//int main()
+//{
+//    int arr[] = { 28,31,29,31,30,31,30,31,31,30,31,30,31 };
+//    int i = 0;
+//    int a = 0;
+//    scanf("%d %d", &i, &a);
+//    if (a == 2)
+//    {
+//        if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0)
+//        {
+//            printf("%d", arr[a]);
+//            return 0;
+//        }
+//        else
+//            printf("%d", arr[0]);
+//        return 0;
+//    }
+//    printf("%d", arr[a]);
+//    return 0;
+//}
+
+//                     多组输入
+
+//#include<stdio.h>
+//int prinf(int i, int a);
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    while (scanf("%d %d", &a, &b) != EOF)
+//    {
+//        // scanf("%d %d",&a,&b);
+//        prinf(a, b);
+//    }
+//    return 0;
+//}
+//int prinf(int i, int a)
+//{
+//    int arr[] = { 28,31,29,31,30,31,30,31,31,30,31,30,31 };
+//    if (a == 2)
+//    {
+//        if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0)
+//        {
+//            printf("%d\n", arr[a]);
+//            return 0;
+//        }
+//        else
+//            printf("%d\n", arr[0]);
+//        return 0;
+//    }
+//    printf("%d\n", arr[a]);
+//    return 0;
+//}
+
+
+//				字母识别
+
+//#include<stdio.h>
+//int main()
+//{
+//    int  arr;
+//    while (scanf("%c\n", &arr) != EOF)
+//    {
+//        if ((arr >= 'A' && arr <= 'Z') || (arr >= 'a' && arr <= 'z'))
+//        {
+//            printf("%c is an alphabet.\n", arr);
+//        }
+//        else
+//        {
+//            printf("%c is not an alphabet.\n", arr);
+//        }
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>
+//#include <ctype.h>
+//int main()
+//{
+//    int ch = 0;
+//    while (~scanf("%c\n", &ch))
+//    {
+//        if (isalpha(ch))
+//            printf("%c is an alphabet.\n", ch);
+//        else
+//            printf("%c is not an alphabet.\n", ch);
+//    }
+//    return 0;
+//}
+
+
+//     大小写转换输出
+
+#include<stdio.h>
+int main()
+{
+    int i;
+    while (scanf("%c", &i) != EOF)
+    {
+        if (i >= 65 && i <= 90)
+            printf("%c\n", i + 32);
+        if (i >= 97 && i <= 122)
+            printf("%c\n", i - 32);
+    }
+    return 0;
+}
