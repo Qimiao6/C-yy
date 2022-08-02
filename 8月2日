@@ -1,0 +1,145 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//int main()
+//{
+//     float i = 0;
+//     scanf("%f", &i);
+//     printf("%.2f", i-1);
+//     return 0;
+//}
+//                      指针
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int* pp = &i;//把a的地址放到int类型的指针变量pp中；
+//	printf("%p\n", pp);
+//	printf("%p\n", &i);//
+//	return 0;
+//}
+
+///                      指针类型错误
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0x11223344;
+//	char* pp = &i;
+//	*pp = 0;//指针类型使用错误，会导致变量修改不全，char只会修改一个字节的数值
+//	return 0;
+//}
+
+//          使用指针变量初始化数组
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*p = i + 1;//p指向的地址等于i+1
+//		p++;//地址加一，arr[1]
+//	}
+//	return 0;
+//}
+
+//           检测不是空指针的时候打印
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 9;
+//	int* p = &a;
+//	if (p != NULL)//只有p不为空指针时才运行 
+//	{
+//		printf("%d", *p);
+//	}
+//	return 0;
+//}
+
+
+//             用指针打印数组
+//#include<stdio.h>
+//int main()
+//{
+//	int i[] = { 1,2,3,4,5,6,7,8,9 };
+//	int a = 0;
+//	int* p = i;
+//	for (a = 0; a < 9; a++)
+//	{
+//		printf("%d ", *(p + a));//*p是p所指向地址的值
+//		printf("%p ", (p + a));//p是地址
+//	}
+//	return 0;
+//}
+
+
+//             用指针初始化数组
+
+//#include<stdio.h>
+//#define dd 9
+//int main()
+//{
+//	int arr[dd];
+//	int* p = NULL;
+//	int i = 0;
+//	for (p = &arr[0]; p < arr[8];)
+//	{
+//		*p++= 1;//先使用后加加
+//		printf("%d", arr[i]);
+//		i++;
+//	}
+//	return 0 ;
+//}
+
+//                                 指针计算字符串长度
+
+//#include<stdio.h>
+//int dd(char* pp);
+//int main()
+//{
+//	char arr[] = "abcdefg";
+//	int yy = dd(arr);
+//	printf("%d", yy);
+//	return 0;
+//}
+//
+//int dd(char* pp)
+//{
+//	int cmon = 0;
+//	while (*pp != '\0')
+//	{
+//		pp++;
+//		cmon++;
+//	}
+//	return cmon;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//    int arr[] = { 1,2,3,4,5 };
+//    short* p = (short*)arr;//注意short只跳两个字符
+//    int i = 0;
+//    for (i = 0; i < 4; i++)
+//    {
+//        *(p + i) = 0;
+//    }
+//
+//    for (i = 0; i < 5; i++)
+//    {
+//        printf("%d ", arr[i]);
+//    }
+//    return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	unsigned long pulArray[] = { 6,7,8,9,10 };
+//	unsigned long* pulPtr;
+//	pulPtr = pulArray;
+//	*(pulPtr + 3) += 3;
+//	printf(" %d, %d\n", *pulPtr, *(pulPtr + 3));
+//	return 0;
+//}
