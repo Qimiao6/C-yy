@@ -1,0 +1,160 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//               结构体用函数打印
+//#include<stdio.h>
+//void print(struct tu* pp);
+//struct tu
+//{
+//	int jg;
+//	char sm[99];
+//};
+//int main()
+//{
+//	struct tu bx = { 100,"eijdi" };
+//	print(&bx);
+//	return 0;
+//}
+//void print(struct tu*pp)
+//{
+//	printf("%d  %s", pp->jg, pp->sm);
+//}
+
+//                     死循环测试
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+//	for (i = 0; i <= 12; i++)//12越界访问，正好越界到i的地址
+//	{
+//		arr[i] = 0;//第12次把i改为了0；
+//		printf("hehe\n");
+//	}
+//	return 0;
+//}
+
+//            strcpy测试
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char arr1[20] = { 0 };
+//	char arr2[] = "hello sdfsdef";
+//	strcpy(arr1, arr2);
+//	printf("%s ", arr1);
+//	return 0;
+//}
+//喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以多少汽水（编程实现）。
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 20;//钱
+//	int conm = 0;//汽水
+//	int y = 0;//空瓶
+//	while (i)
+//	{
+//		i--;
+//		conm++;
+//		y++;
+//		if(y==2)
+//		{
+//			i++;
+//			y = 0;
+//		}
+//	}
+//	printf("最多可以买:  %d  瓶汽水 ", conm);
+//	return 0;
+//}
+// 
+//#include<stdio.h>
+//int main()
+//{
+//    int i = 0;
+//    for (i = 0; i < 100000; i++)
+//    {
+//        int y = ((i / 10000) * (i % 10000)) + ((i / 1000) * (i % 1000)) + ((i / 100) * (i % 100)) + ((i / 10) * (i % 10));
+//        if (y == i)
+//        {
+//            printf("%d ", i);
+//        }
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//    int i;
+//    for (i = 10000; i < 100000; i++)
+//    {
+//        if (i == (i / 10000) * (i % 10000) + (i / 1000) * (i % 1000) + (i / 100) * (i % 100) + (i / 10) * (i % 10))
+//            printf("%d ", i);
+//    }
+//    return 0;
+//}
+
+
+//                         const修饰
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 9;
+//	char* const p = &i;
+//	*p = 10;
+//	printf("%d ", i);
+//	return 0;
+//
+//}
+
+//奇数位于数组的前半部分，
+//所有偶数位于数组的后半部分。
+
+
+//调整数组使奇数全部都位于偶数前面。
+//#include<stdio.h>
+//void pint(int p[]);
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	pint(arr);
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+//void pint(int p[])
+//{
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		int a = 0;
+//		for (a = 0;a < 9; a++)
+//		{
+//			if( p[a]% 2 == 0)//判断是否为偶数
+//				if (p[a + 1] % 2 != 0)//判断是否为奇数
+//				{
+//					int w = p[a];
+//					p[a] = p[a + 1];
+//					p[a + 1] = w;
+//				}
+//		}
+//	}
+//}
+
+ #include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr1[20] = "xxxxxxxxxxxxxxxxxx";
+	char arr2[] = "hello sdfsdef";
+	strcpy(arr1, arr2);
+	printf("%s ", arr1);
+	return 0;
+}
