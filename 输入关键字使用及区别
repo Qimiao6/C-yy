@@ -1,0 +1,68 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//           scanf使用测试
+//#include<stdio.h>
+//int main()
+//{
+//	char i ;
+//	char e[101] = { 0 };
+//	scanf("%s", i);//测试得出scsnf会把空格认定为字符串结束
+//	printf("%s\n", i);//无法将空格输入到字符或字符串中
+//	scanf("%s", e);
+//	printf("%s", e);
+//	return 0;
+//}
+
+//                            gets关键字使用测试
+
+//#include<stdio.h>
+//int main()
+//{
+//	char i[101] = { 0 };
+//	gets(i);//gets只能用于输入字符串，gets把空格也认为是字符串的内容并读取
+//	printf("%s", i);//只有回车时gets的读取才结束；
+//	return 0;
+//}
+
+//                    逆序带空格字符串
+void reverse(char* left, char* right);
+#include<stdio.h>
+#include<assert.h>
+#include<string.h>
+int main()
+{
+	char arr[101] = { 0 };
+	gets(arr);
+	char* cur = arr;//把首地址存到* cur中
+	while (*cur)//每个单词进去一次
+	{
+		char* start = cur;//单词首地址
+		char* end = cur; // 单词末地址
+		while (*end != ' ' && *end != '\0')//检测到空格或者\0
+		{
+			end++;//不等于上述条件末地址加一
+		}
+		reverse(start, end-1);
+		if (*end == '\0')//如果是\0那结束
+			cur = end;
+		else
+			cur = end+1;
+	}
+	int len = strlen(arr);
+   reverse(arr, arr + len - 1);
+	printf("%s\n", arr);
+	return 0;
+}
+void reverse(char* left, char* right)//首尾
+{
+	assert(left);//断言，检测left是否为空指针
+	assert(right);
+	while (left < right)
+	{
+		char i = *left;
+		*left = *right;
+		*right = i;
+		left++;
+		right--;
+	}
+
+}
