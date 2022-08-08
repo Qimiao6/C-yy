@@ -1,0 +1,91 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//#include<string.h>
+//#include<assert.h>
+//void retut(char* rr, char* bb)
+//{
+//	assert(rr);
+//	assert(bb);
+//	while (rr < bb)
+//	{
+//		char i = *rr;
+//		*rr = *bb;
+//		*bb = i;
+//		rr++;
+//		bb--;
+//	}
+//}
+//int main()
+//{
+//	char i[101] = { 0 };
+//	gets(i);
+//	char* lfot = i;//首
+//	while (*lfot)
+//	{
+//		char* rirt = lfot;//尾
+//		while (*rirt != ' ' && *rirt != '\0')
+//		{
+//			rirt++;
+//		}
+//		retut(lfot, rirt-1);
+//		if (rirt == '\0')
+//			lfot = rirt;
+//		else
+//			lfot = rirt+1;
+//	}
+//	int st =strlen(i)-1;
+//	retut(i, i+st);
+//	printf("%s", i);
+//	return 0;
+//}
+
+//                          strlen测试
+
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char i[] = "dsf";
+//	int st  = strlen(&i)-1;//strlen只能计算字符数组类型
+//	//printf("%d\n", i[1]);
+//	printf("%d\n", st);
+//	return 0;
+//}
+//
+//#include <stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    while (~scanf("%d", &n))
+//    {
+//        int i = 0;
+//        int j = 0;
+//        for (i = 0; i < n + 1; i++)
+//        {
+//            for (j = 0; j < n - i; j++)
+//            {
+//                printf("  ");//两个空格
+//            }
+//            for (j = 0; j <= i; j++)
+//            {
+//                printf("*");//*
+//            }
+//            printf("\n");
+//        }
+//        for (i = 0; i < n; i++)
+//        {
+//            for (j = 0; j <= i; j++)
+//            {
+//                printf("  ");
+//            }
+//            for (j = 0; j < n - i; j++)
+//            {
+//                printf("*");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+//         循环分支练习
