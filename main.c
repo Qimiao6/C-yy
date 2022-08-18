@@ -1,143 +1,213 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//#include <stdio.h>
+//                     回调
+#include"huid.h"
 //int main()
 //{
-//	int i = 1;//循环次数
-//	int k = 1;//分母
-//	int y = 1;//分字
-//	float d = 0.0;//储存
-//	while (i <= 100)
+//	int i = 0;//方式
+//	do
 //	{
-//		
-//		if (i % 2 == 0 || i == 1)
-//			d = d - (k / y);
-//		else
-//			d = d + (k / y);
-//		i++;
-//		y++;
-//	}
-//	printf("%f", d);
+//		printf("**************************************\n");
+//		printf("***********  1:加    2:减  ***********\n");
+//		printf("***********  1:乘    2:除  ***********\n");
+//		printf("请选择要计算的方式1/2/3/4\n");
+//		scanf("%d",&i);
+//		switch (i)
+//		{
+//		case 1:
+//			crc(add);
+//			break;
+//		case 2:
+//			crc(sub);
+//			break;
+//		case 3:
+//			crc(rid);
+//			break;
+//		case 4:
+//			crc(div);
+//			break;
+//		case 0:
+//			break;
+//		default:
+//			printf("输入错误\n");
+//			break;
+//		}
+//	} while (i);
 //	return 0;
 //}
-//#include <stdio.h>
-//
-//
-//int  main()
+//void crc(int(*pp)(int, int))
+//{
+//	int a = 0;
+//	int b = 0;
+//	printf("请输入要计算的两个值\n");
+//	scanf("%d%d", &a, &b);
+//	int y = pp(a, b);
+//	printf("%d\n", y);
+//}
+//int add(int x, int y)
+//{
+//	return x + y;
+//}
+//int sub(int x, int y)
+//{
+//	return x - y;
+//}
+//int rid(int x, int y)
+//{
+//	return x * y;
+//}
+//int div(int x, int y)
+//{
+//	return x / y;
+//}
+
+//                   冒泡
+//int main()
+//{
+//	int i[] = { 2,5,8,4,3,6,1,9,7,0 };
+//	int sz = sizeof(i) / sizeof(i[0]);
+//	maop(i, sz);
+//	print(i, sz);
+//	return 0;
+//}
+void print(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+//void maop(int arr[], int sz)
 //{
 //	int i = 0;
-//	double sum = 0.0;
-//	int flag = 1;
-//	for (i = 1; i <= 100; i++)
+//	for (i = 0; i < sz-1; i++)
 //	{
-//		sum += flag * 1.0 / i;
-//		flag = -flag;
+//		int j = 0;
+//		for (j = 0; j < sz-1- i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				int k = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = k;
+//			}
+//		}
 //	}
-//	printf("%lf\n", sum);
-//	return 0;
 //}
 
-//                                  递归实现n的k次方
-//int stet(int n,int k)
+//                 qsort的使用(本质是用快排的原理)
+//int cmp_int(const void* q1, const void* q2)
 //{
-//	if (k > 1)
-//	{
-//		return (n* stet(n, k-1));
-//	}
-//	else
-//	{
-//		return n;
-//	}
-//
+//	return(*(int*)q1 - *(int*)q2);
 //}
-//
-//#include<stdio.h>
+//void test()
+//{
+//	int arr[] = { 2,3,5,1,6,7,9,8,4,0 };
+//	int sz = sizeof(arr) / sizeof(arr[1]);
+//	qsort(arr,sz, sizeof(arr[1]),cmp_int);
+//	print(arr, sz);
+//}
 //int main()
 //{
-//	int n = 0;
-//	int k = 0;
-//	printf("输入n k:\n");
-//	scanf("%d %d", &n,&k);
-//	int y=stet(n,k);
-//	printf("%d", y);
+//	//test();
 //	return 0;
 //}
 
-//                  例如，调用DigitSum(1729)，则应该返回1+7+2+9，它的和是19
-////                            输入：1729，输出：19
-//#include <stdio.h>
-//int DigitSum(int jj);
-//int main()
+//             用冒泡排序原理实现qsort
+//void swip(char* a1, char* a2, int i)
 //{
-//	int n = 0;
-//	scanf("%d", &n);
-//	int gg =DigitSum(n);
-//	printf("%d", gg);
-//	return 0;
-//}
-//int DigitSum(int jj)
-//{
-//	if (jj >= 10)
+//	int j = 0;
+//	for (j = 0; j < i; j++)
 //	{
-//		return jj % 10 + DigitSum(jj / 10);
-//	}
-//	else
-//	{
-//		return (jj % 10);
+//		char p = *a1;
+//		*a1 = *a2;
+//		*a2 = p;
+//		a1++;
+//		a2++;
 //	}
 //}
-
-////                   字符串逆序（递归实现）
-//#include <stdio.h>
-//char reverse_string(char* str)
+//void maopao(void* dd, int sz, int kuan, int (*pp)(const void*, const void*))
 //{
-//	if (*str == '\0')
-//	{
-//		return;
-//	}
-//	reverse_string(str + 1);
-//	printf("%c", *str);
-//}
+//	int i = 0;
+//		for (i = 0; i < sz - 1; i++)
+//		{
+//			int j = 0;
+//			for (j = 0; j < sz - 1 - i; j++)
+//			{
+//				if (pp((char*)dd + j * kuan, (char*)dd + (j + 1) * kuan)>0)
+//				{
+//					swip((char*)dd + j * kuan, (char*)dd + (j + 1) * kuan, kuan);
 //
-//int main()
-//{
-//	char str[] = "abcefg";
-//	reverse_string(str);
-//	printf("\n");
-//	return 0;
-//}
-//                    递归和非递归分别实现strlen
-
-////                        非递归
-//#include <stdio.h>
-//int main()
-//{
-//	char pp[] = { "abcdef" };
-//	printf("%d", strlen(pp));
-//	return 0;
-//}
-
-//   递归
-//int i = 0;
-//int rrh(char* kk)
-//{
-//	if (kk[i]!='\0')
-//	{
-//		return 1 + rrh(kk + 1);
-//	}
-//	else
-//	{
-//		return 0;
-//	}
+//				}
+//			}
 //
+//	    }
 //}
-//
-//#include<stdio.h>
+//void test1()
+//{
+//	int arr[] = { 6,7,8,9,1,2,3,4,5 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	maopao(arr, sz, sizeof(arr[0]), cmp_int);
+//	print(arr, sz);
+//}
 //int main()
 //{
-//	
-//	char pp[] = { "abcdef" };
-//	int yy = rrh(pp);
-//	printf("%d", yy);
+//	test1();
 //	return 0;
 //}
 
+//             用冒泡排序原理实现qsort  2
+
+
+struct my
+{
+	char name[30];
+	int siz;
+};
+int may_name(const void* d1, const void* d2)
+{
+	return (strcmp(((struct my*)d1)->name, ((struct my*)d2)->name));
+}
+int may_age(const void* d1, const void* d2)
+{
+	return(((struct my*)d1)->siz, ((struct my*)d2)->siz);
+}
+void huan(char* d1, char* d2, int kuan)
+{
+	int i = 0;
+	for (i = 0; i < kuan; i++)
+	{ 
+		char y = *d1;
+		*d1 = *d2;
+		*d2 = y;
+		d1++;
+		d2++;
+	}
+}
+void may(void* gg, int sz, int kuan, int (*ff)(void*, void*))
+{
+	int i = 0;
+	for (i = 0; i < sz - 1; i++)
+	{
+		int j = 0;
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (ff((char*)gg + j * kuan, (char*)gg + (j + 1) * kuan) < 0)
+			{
+				huan((char*)gg + j * kuan, (char*)gg + (j + 1) * kuan, kuan);
+			}
+		}
+	}
+ }
+void test4()
+{
+	struct my book[] = { {"wangwu",15},{"zhangsan",8},{"lisi",20} };
+	int sz = sizeof(book) / sizeof(book[0]);//元素个数
+	may(book, sz, sizeof(book[0]), may_name);
+	may(book, sz, sizeof(book[0]), may_age);
+}
+int main()
+{
+	test4();
+	return 0;
+}
