@@ -1,0 +1,125 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//
+//
+//
+//          枚举
+//#include<stdio.h>
+//enum book
+//{
+//	da,
+//	xao,
+//	duo
+//};
+//int main()
+//{
+//	printf("%d\n", da);//依次向下输出0，1，2
+//	printf("%d\n", xao);//说明枚举是有值的
+//	printf("%d\n", duo);
+//	return 0;
+//}
+//                 给枚举赋初始值
+//#include<stdio.h>
+//#define mm 10;
+//enum book
+//{
+//	da = 5,
+//	xao,
+//	duo= 4
+//};
+//int main()
+//{
+//	int m = mm;//define定义的常量
+//	printf("%d\n", da);//依次向下输出5，6，9
+//	printf("%d\n", xao);//说明枚举可以赋初始值，不赋值的依次递增
+//	printf("%d\n", duo);//可不按顺序赋值
+//	printf("%d\n", m );
+//	return 0;
+//}
+
+//                枚举的应用（枚举是常量）
+//
+
+
+
+//            联合体
+
+//union mm
+//{
+//	int i;
+//	char b;
+//	double c;
+//};
+//#include<stdio.h>
+//int main()
+//{
+//	union mm un;
+//	printf("%d\n", sizeof(un));//联合体大小至少等于最大元素大小
+//	printf("%p\n", &un);//以下地址均一致，因为联合体共用一个地址
+//	printf("%p\n", &un.i);//由于用的是同一个地址，所以每次只能使用其中一个元素
+//	printf("%p\n", &un.b);
+//	printf("%p\n", &un.c);
+//	return 0;
+//}
+////                联合体储存探究
+//#include<stdio.h>
+//union mm
+//{
+//	int i;
+//	char b;
+//	double c;
+//};
+//#include<stdio.h>
+//int main()
+//{
+//	union mm un;
+//	un.i = 10;
+//	printf("%d\n", un.i);//
+//	printf("%d\n", un.b);//也会读取到10，说明是内存共用的一次只能使用一个
+//	return 0;
+//}
+//                联合体判断大小端储存
+//#include<stdio.h>
+//union mm
+//{
+//	int i;
+//	char b;
+//	double c;
+//};
+//#include<stdio.h>
+//int main()
+//{
+//	union mm un;
+//	un.i = 1;
+//	char* pp = (char*)&un.i;
+//	printf("%d\n", un.i);
+//	printf("%d\n", *pp);
+//	printf("%d\n", un.b);//char读到了最低位是1，所以为小端储存
+//	return 0;
+//}
+//#include<stdio.h>
+//union mm
+//{
+//	int i;
+//	short b;
+//};
+//#include<stdio.h>
+//int main()
+//{
+//	union mm un;
+//	printf("%d\n", sizeof(un));//不是最大对齐数整数倍是，所占内存等于最大对齐数
+//	return 0;
+//}
+
+//                 memcmp
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i = 0;
+	char str1[] = "abfdef";
+	char str2[] = "abddef";
+	i = memcmp(str1, str2,3);
+	printf("%d", i);
+	return 0;
+
+}
