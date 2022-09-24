@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//       
+
+//				位段
+//
+//struct book
+//{
+//	int a;
+//	int b;
+//	int c;
+//	int d;
+//};
+//struct bood//位段能把内存按比特位为单位分配给变量
+//{
+//	int _a : 4;
+//	int _b : 10;
+//	int _c : 10;//4+10+10,24了int只有32比特位，下一位需要30比特位，
+//	int _d : 30;//所以得重新开辟空间，每次开辟空间大小为int;
+//};//开辟了两次所以大小为8字节
+//#include<stdio.h>
+//int main()
+//{
+//	printf("%d\n", sizeof(struct book));//16
+//	printf("%d\n", sizeof(struct bood));
+//	return 0;
+//}//
+
+//    位段能以字节为单位分配内存
+#include<stdio.h>
+struct book
+{
+	char a : 3;//表示变量a只占3个字节
+	char b : 2;//表示变量b的数据只占2个字节
+	char c : 5;
+	char d : 5;
+};
+int main()
+{
+	struct book mm = { 0 };
+	mm.a = 6;//110
+	mm.b = 5;//101 - 截断放入内存变01(1)
+	mm.c = 8;//01000
+	mm.d = 17;//10001
+	printf("%d\n", sizeof(struct book));
+	return 0;
+}
