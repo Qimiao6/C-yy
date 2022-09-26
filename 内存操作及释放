@@ -1,0 +1,114 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+
+////               空指针测试
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 2;
+//	int* pp = &a;
+//	printf("%d\n", (int)NULL);//空指针为0可用于判断
+//	printf("%d ",(int)pp);//
+//	return 0;
+//}
+
+//             realloc的使用
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<assert.h>
+//int main()
+//{
+//	int i = 0;
+//	int* pp = (int*)malloc(10 * sizeof(int));
+//	assert(pp);
+//	for (i = 0; i < 15; i++)
+//	{
+//		if (i == 9)//i 到达 9 的时候用realloc增大内存
+//		{
+//			int* p = pp;
+//			   p = (int*)realloc(pp, 15 * sizeof(int));
+//				if (p)//判断是否为空指针
+//				{
+//					pp = p;
+//				}
+//		}
+//		*(pp + i) = i;
+//		printf("%d ", *(pp + i));
+//
+//	}
+//	free(pp);
+//	pp = NULL;
+//	return 0;
+//
+//} 
+
+//         不小心给realloc传了空指针
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int i = 0;
+//	int* pp = NULL;
+//	int* p = (int*)realloc(pp, 10 * sizeof(int));//如果传空指针则表示重新开辟一个内存空间
+//	if (p == NULL)
+//	{
+//		perror("realloc");
+//	}
+//	/*for (i = 0; i < 10; i++)//会出空指针的警告
+//	{
+//		*(p + i) = i;
+//		printf("%d", *(p + i));
+//	}*/
+//	if (p)//加if消除警告
+//	{
+//		for (i = 0; i < 10; i++)
+//		{
+//			*(p + i) = i;
+//			printf("%d", *(p + i));
+//		}
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//            memset         内存设置
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//int main()
+//{
+//	int i[10] = { 0 };
+//	memset(i, 10, 10 * sizeof(int));
+//	return 0;
+//}
+
+
+//               防止对空指针的解引用
+
+//#include<stdlib.h>
+//#include<stdio.h>
+//int main()
+//{
+//	int* p = (int*)malloc(sizeof(int) * INT_MAX);//开辟后返回头指针
+//	if (p == NULL)//如果开辟失败返回空指针
+//	{
+//		perror("malloc");//打印错误信息
+//		return 1;
+//	}
+//	*p = 1;
+//	printf("%d", *p);
+//	free(p);//结束后需要释放空间，malloc和free需成对出现
+//	p = NULL;//将指针置空
+//	return 0;
+//}
+
+#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	scanf("%d%d%d", &a, &b, &c);
+	printf("%d", a + b + c);
+	return 0;
+}
